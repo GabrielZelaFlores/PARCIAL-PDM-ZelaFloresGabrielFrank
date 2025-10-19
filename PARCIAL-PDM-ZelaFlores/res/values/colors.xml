@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Autor: Gabriel Frank Krisna Zela Flores
+Descripción: Define los colores principales utilizados en el juego.
+Fecha creación: 17/10/2025
+Última modificación: 17/10/2025
+-->
+<resources>
+    <!-- 🎨 Colores principales -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- ⚫ Colores de fondo -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- 🌈 Colores del juego -->
+    <color name="red_color">#E53935</color>
+    <color name="green_color">#43A047</color>
+    <color name="blue_color">#1E88E5</color>
+    <color name="yellow_color">#FDD835</color>
+
+    <!-- Fondo general -->
+    <color name="bg_color">#FFF8E1</color>
+</resources>

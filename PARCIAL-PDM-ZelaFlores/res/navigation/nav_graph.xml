@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Autor: Gabriel Frank Krisna Zela Flores
+Descripcion: Grafo de navegación del juego. Define el flujo entre pantallas: bienvenida → juego → resultados,
+permitiendo volver a jugar o regresar al inicio desde la pantalla final.
+Fecha creación: 17/10/2025
+Última modificación: 17/10/2025
+-->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <!-- 🟢 Pantalla de bienvenida -->
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.gabrielfrankkrisnazelaflores.juegodecolores.ui.WelcomeFragment"
+        android:label="Bienvenida">
+
+        <!-- Acción que lleva al fragmento del juego -->
+        <action
+            android:id="@+id/action_welcome_to_game"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <!-- 🎮 Pantalla del juego -->
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.gabrielfrankkrisnazelaflores.juegodecolores.ui.GameFragment"
+        android:label="Juego">
+
+        <!-- Acción que lleva al fragmento de resultados al finalizar el juego -->
+        <action
+            android:id="@+id/action_game_to_result"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <!-- 🏁 Pantalla de resultados -->
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.gabrielfrankkrisnazelaflores.juegodecolores.ui.ResultFragment"
+        android:label="Resultados">
+
+        <!-- Argumento que recibe el puntaje final desde GameFragment -->
+        <argument
+            android:name="finalScore"
+            app:argType="integer" />
+
+        <!-- Acción para volver a jugar -->
+        <action
+            android:id="@+id/action_result_to_game"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+
+        <!-- Acción para volver al inicio -->
+        <action
+            android:id="@+id/action_result_to_welcome"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+
+</navigation>
