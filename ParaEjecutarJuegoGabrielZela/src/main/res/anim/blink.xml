@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Autor: Gabriel Frank Krisna Zela Flores
+Descripcion: Animación de parpadeo suave que se aplica al botón correcto cuando el jugador acierta.
+Fecha creación: 17/10/2025
+Última modificación: 17/10/2025
+-->
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="200"
+    android:fromAlpha="1.0"
+    android:toAlpha="0.3"
+    android:repeatMode="reverse"
+    android:repeatCount="1" />
